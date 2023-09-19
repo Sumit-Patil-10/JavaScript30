@@ -48,6 +48,7 @@
         inset 0 0 0 3px #EFEFEF,
         inset 0 0 10px black,
         0 0 10px rgba(0,0,0,0.2);
+
     }
 
     .clock-face {
@@ -63,11 +64,23 @@
       background: black;
       position: absolute;
       top: 50%;
+      transform: rotate(90deg);
+    transform-origin: 100%;
+    transition: all 1s ease-in;
     }
 
   </style>
 
   <script>
+
+    function setDate(){
+      let date = new Date();
+      let TimeStamp = date.getSeconds();
+      Document.getElementById("second-hand").addEventlistner()
+      
+    }
+
+    setInterval(setDate, 1000);
 
 
   </script>
